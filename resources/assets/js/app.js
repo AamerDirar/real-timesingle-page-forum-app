@@ -11,6 +11,7 @@ window.Vue = require('vue');
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 
+
 Vue.config.productionTip = false
 Vue.use(Vuetify)
 export default new Vuetify({ })
@@ -22,10 +23,10 @@ export default new Vuetify({ })
  */
 
 Vue.component('AppHome', require('./components/AppHome.vue'));
-
+import router from './Router/router'
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
-    vuetify: new Vuetify(),
-    router
+    router,
+    vuetify: new Vuetify()
   })
